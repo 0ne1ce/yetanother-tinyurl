@@ -1,3 +1,7 @@
+README.md
+connect_db.py
+endpoints.md
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

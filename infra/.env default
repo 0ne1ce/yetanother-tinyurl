@@ -1,0 +1,8 @@
+DB_ENGINE=django.db.backends.postgresql_psycopg2
+DB_NAME=postgres
+DB_USER=postgres
+DB_PASSWORD=postgres
+DB_HOST=db
+DB_PORT=5432
+SECRET_KEY=django-insecure-7y@v_tgs)wauzc*lo1b@b=i1k3oq%xaeg&q#c84h=6qogh*0d2
+ALLOWED_HOSTS=*

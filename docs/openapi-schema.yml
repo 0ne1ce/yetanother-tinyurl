@@ -1,0 +1,75 @@
+openapi: 3.0.2
+info:
+  title: Сервис коротких ссылок
+  description: API для создания и управления короткими ссылками.
+  version: "1.0.0"
+servers:
+  - url: http://localhost:8000/
+paths:
+  /{tinyurl}/:
+    get:
+      summary: Редирект по короткой ссылке
+      parameters:
+        - in: path
+          name: tinyurl
+          required: true
+          schema:
+            type: string
+            pattern: '^[A-Za-z0-9]{10}$'
+          description: Короткий идентификатор ссылки
+      responses:
+        302:
+          description: Редирект на оригинальный URL.
+        404:
+          description: Ссылка не найдена.
+  /api/v1/{tinyurl}/stats/:
+    get:
+      summary: Просмотр статистики переходов по короткой ссылке
+      parameters:
+        - in: path
+          name: tinyurl
+          required: true
+          schema:
+            type: string
+          description: Короткий идентификатор ссылки
+      responses:
+        200:
+          description: Статистика переходов предоставлена.
+        404:
+          description: Ссылка не найдена.
+  /api/v1/token/:
+    post:
+      summary: Получение токена доступа
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                password:
+                  type: string
+      responses:
+        200:
+          description: Токен успешно получен.
+        401:
+          description: Неверные учетные данные.
+  /api/v1/token/refresh/:
+    post:
+      summary: Обновление токена доступа
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                refresh:
+                  type: string
+      responses:
+        200:
+          description: Токен успешно обновлен.
+        401:
+          description: Неверный или истекший токен.
