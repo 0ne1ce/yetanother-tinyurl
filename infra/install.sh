@@ -1,5 +1,4 @@
-sudo apt update && sudo apt install -y python3 python3-pip && \
-pip3 install psycopg2-binary
+sudo apt update && sudo apt install -y python3 python3-pip
 
 sudo apt install docker.io -y
 sudo curl -SL https://github.com/docker/compose/releases/download/v2.13.0/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose

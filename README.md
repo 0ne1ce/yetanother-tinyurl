@@ -11,10 +11,10 @@
 Roadmap:
 (+) API
 (+) Docker
-Managed PostgreSQL
+(+) Managed PostgreSQL
 Документация (написать + добавить эндпоинты)
-Load Balancer
 Group VM Instances
+Load Balancer
 Domain-Name
 SSL
 
@@ -90,9 +90,9 @@ curl -X POST http://yourdomain.com/api/v1/urls/ \
 
 Making an Unauthorized (Non-Authenticated) Request
 For an unauthorized or non-authenticated request, simply omit the Authorization header. The system will treat the request as coming from an anonymous user. Here’s how the curl command looks for an unauthorized request:
-curl -X POST http://yourdomain.com/api/v1/urls/ \
+curl -X POST http://127.0.0.1/api/v1/urls/ \
      -H "Content-Type: application/json" \
-     -d '{"originalUrl": "http://example.com"}'
+     -d '{"originalUrl": "https://ya.ru"}'
 
 
 
