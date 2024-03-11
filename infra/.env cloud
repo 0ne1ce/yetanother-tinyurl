@@ -1,8 +1,0 @@
-DB_ENGINE=django.db.backends.postgresql_psycopg2
-DB_HOST=rc1a-gf2ihxfi7ff8qqnn.mdb.yandexcloud.net
-DB_PORT=6432
-DB_NAME=db1
-DB_USER=user1
-DB_PASSWORD=password101
-SECRET_KEY=django-insecure-7y@v_tgs)wauzc*lo1b@b=i1k3oq%xaeg&q#c84h=6qogh*0d2
-ALLOWED_HOSTS=*
